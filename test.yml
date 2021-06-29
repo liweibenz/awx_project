@@ -1,5 +1,5 @@
 ---
-- hosts: sys
+- hosts: all
   tasks:
     - name: "exec shell"
       shell: cat /proc/sys/net/ipv4/ip_forward
