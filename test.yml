@@ -1,0 +1,10 @@
+---
+- hosts: sys
+  tasks:
+    - name: "exec shell"
+      shell: cat /proc/sys/net/ipv4/ip_forward
+      register: ip_forward
+ 
+    - name: "set fact"
+      set_fact:
+        ip_forward: "{{ ip_forward.stdout }}" 
